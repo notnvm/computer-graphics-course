@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace computer_graphics
 {
-    internal class sobel_filter : matirx_filter
+    internal class sharpness_filter : matirx_filter
     {
-        public sobel_filter()
+        public sharpness_filter()
         {
             kernel = new float[,]{
-                { -1,  0,  1, },
-                { -2,  0,  2, },
-                { -1,  0,  1, },
+                { -1,  -1,  -1, },
+                { -1,  9,  -1, },
+                { -1,  -1,  -1, },
             };
         }
     }

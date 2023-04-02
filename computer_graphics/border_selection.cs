@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace computer_graphics
 {
-    internal class sobel_filter : matirx_filter
+    internal class border_selection : matirx_filter
     {
-        public sobel_filter()
+        public border_selection()
         {
             kernel = new float[,]{
-                { -1,  0,  1, },
-                { -2,  0,  2, },
-                { -1,  0,  1, },
+                { 3,  10,  3, },
+                { 0,  0,  0, },
+                { -3,  -10,  -3, },
             };
         }
     }
