@@ -2,6 +2,7 @@ namespace computer_graphics
 {
     public partial class Form1 : Form
     {
+        morphology_setup_kernel morphology_form = new morphology_setup_kernel();
         Bitmap img;
         bool not_busy = true;
 
@@ -197,6 +198,84 @@ namespace computer_graphics
                     }
                 }
             }
+        }
+
+        private void glassesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (not_busy)
+            {
+                glass_filter glass = new glass_filter();
+                backgroundWorker1.RunWorkerAsync(glass);
+            }
+            else MessageBox.Show("Please wait...");
+        }
+
+        private void dIlationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dilation dil;
+            if (not_busy)
+            {
+                if (morphology_form.n != 0)
+                    dil = new dilation(morphology_form.kernel, morphology_form.n, morphology_form.n);
+                else
+                    dil = new dilation();
+                backgroundWorker1.RunWorkerAsync(dil);
+            }
+            else MessageBox.Show("Please wait...");
+        }
+
+        private void erosionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            erosion er;
+            if (not_busy)
+            {
+                if (morphology_form.n != 0)
+                    er = new erosion(morphology_form.kernel, morphology_form.n, morphology_form.n);
+                else
+                    er = new erosion();
+                backgroundWorker1.RunWorkerAsync(er);
+            }
+            else MessageBox.Show("Please wait...");
+        }
+
+        private void gradientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            gradient grad;
+            if (not_busy)
+            {
+                if (morphology_form.n != 0)
+                    grad = new gradient(morphology_form.kernel, morphology_form.n, morphology_form.n);
+                else
+                    grad = new gradient();
+                backgroundWorker1.RunWorkerAsync(grad);
+            }
+            else MessageBox.Show("Please wait...");
+        }
+
+        private void medianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (not_busy)
+            {
+                median med = new median();
+                backgroundWorker1.RunWorkerAsync(med);
+            }
+            else MessageBox.Show("Please wait...");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            morphology_form = new morphology_setup_kernel();
+            morphology_form.Show();
+        }
+
+        private void shiftToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (not_busy)
+            {
+                shift sft = new shift();
+                backgroundWorker1.RunWorkerAsync(sft);
+            }
+            else MessageBox.Show("Please wait...");
         }
     }
 }

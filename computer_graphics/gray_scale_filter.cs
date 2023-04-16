@@ -10,9 +10,13 @@ namespace computer_graphics
     {
         protected override Color calculate_pxl_color(Bitmap src_img, int x, int y)
         {
-            Color src_col = src_img.GetPixel(x, y);
-            Color intensity = Color.FromArgb((int)(0.299 * src_col.R), (int)(0.587 * src_col.G), (int)(0.114 * src_col.B));
-            return intensity;
+            int intensity = Convert.ToInt32(0.36 * src_img.GetPixel(x, y).R + 0.53 * src_img.GetPixel(x, y).G + 0.11 * src_img.GetPixel(x, y).B);
+            Color color = Color.FromArgb(
+                clamp(intensity,0,255),
+                clamp(intensity, 0, 255),
+                clamp(intensity, 0, 255)
+                );
+            return color;
         }
     }
 }
