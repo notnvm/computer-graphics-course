@@ -1,0 +1,36 @@
+G:\dev\graphics\tomogramm lab_2\tomogramm_Smolin\bin\Debug\tomogramm_Smolin.exe.config
+G:\dev\graphics\tomogramm lab_2\tomogramm_Smolin\bin\Debug\tomogramm_Smolin.exe
+G:\dev\graphics\tomogramm lab_2\tomogramm_Smolin\bin\Debug\tomogramm_Smolin.pdb
+G:\dev\graphics\tomogramm lab_2\tomogramm_Smolin\bin\Debug\OpenTK.dll
+G:\dev\graphics\tomogramm lab_2\tomogramm_Smolin\bin\Debug\OpenTK.GLControl.dll
+G:\dev\graphics\tomogramm lab_2\tomogramm_Smolin\bin\Debug\OpenTK.pdb
+G:\dev\graphics\tomogramm lab_2\tomogramm_Smolin\bin\Debug\OpenTK.xml
+G:\dev\graphics\tomogramm lab_2\tomogramm_Smolin\bin\Debug\OpenTK.GLControl.xml
+G:\dev\graphics\tomogramm lab_2\tomogramm_Smolin\obj\Debug\tomogramm_Smolin.csproj.AssemblyReference.cache
+G:\dev\graphics\tomogramm lab_2\tomogramm_Smolin\obj\Debug\tomogramm_Smolin.csproj.SuggestedBindingRedirects.cache
+G:\dev\graphics\tomogramm lab_2\tomogramm_Smolin\obj\Debug\tomogramm_Smolin.Form1.resources
+G:\dev\graphics\tomogramm lab_2\tomogramm_Smolin\obj\Debug\tomogramm_Smolin.Properties.Resources.resources
+G:\dev\graphics\tomogramm lab_2\tomogramm_Smolin\obj\Debug\tomogramm_Smolin.csproj.GenerateResource.cache
+G:\dev\graphics\tomogramm lab_2\tomogramm_Smolin\obj\Debug\tomogramm_Smolin.csproj.CoreCompileInputs.cache
+G:\dev\graphics\tomogramm lab_2\tomogramm_Smolin\obj\Debug\tomogramm_Smolin.csproj.CopyComplete
+G:\dev\graphics\tomogramm lab_2\tomogramm_Smolin\obj\Debug\tomogramm_Smolin.exe
+G:\dev\graphics\tomogramm lab_2\tomogramm_Smolin\obj\Debug\tomogramm_Smolin.pdb
+G:\dev\graphics\tomogramm lab_2\tomogramm_Smolin\bin\Debug\OpenTK.dll.config
+G:\dev\graphics\computer_graphics\second\tomogramm_Smolin\bin\Debug\tomogramm_Smolin.exe.config
+G:\dev\graphics\computer_graphics\second\tomogramm_Smolin\bin\Debug\tomogramm_Smolin.exe
+G:\dev\graphics\computer_graphics\second\tomogramm_Smolin\bin\Debug\tomogramm_Smolin.pdb
+G:\dev\graphics\computer_graphics\second\tomogramm_Smolin\bin\Debug\OpenTK.dll
+G:\dev\graphics\computer_graphics\second\tomogramm_Smolin\bin\Debug\OpenTK.GLControl.dll
+G:\dev\graphics\computer_graphics\second\tomogramm_Smolin\bin\Debug\OpenTK.pdb
+G:\dev\graphics\computer_graphics\second\tomogramm_Smolin\bin\Debug\OpenTK.xml
+G:\dev\graphics\computer_graphics\second\tomogramm_Smolin\bin\Debug\OpenTK.dll.config
+G:\dev\graphics\computer_graphics\second\tomogramm_Smolin\bin\Debug\OpenTK.GLControl.xml
+G:\dev\graphics\computer_graphics\second\tomogramm_Smolin\obj\Debug\tomogramm_Smolin.csproj.AssemblyReference.cache
+G:\dev\graphics\computer_graphics\second\tomogramm_Smolin\obj\Debug\tomogramm_Smolin.csproj.SuggestedBindingRedirects.cache
+G:\dev\graphics\computer_graphics\second\tomogramm_Smolin\obj\Debug\tomogramm_Smolin.Form1.resources
+G:\dev\graphics\computer_graphics\second\tomogramm_Smolin\obj\Debug\tomogramm_Smolin.Properties.Resources.resources
+G:\dev\graphics\computer_graphics\second\tomogramm_Smolin\obj\Debug\tomogramm_Smolin.csproj.GenerateResource.cache
+G:\dev\graphics\computer_graphics\second\tomogramm_Smolin\obj\Debug\tomogramm_Smolin.csproj.CoreCompileInputs.cache
+G:\dev\graphics\computer_graphics\second\tomogramm_Smolin\obj\Debug\tomogramm_Smolin.csproj.CopyComplete
+G:\dev\graphics\computer_graphics\second\tomogramm_Smolin\obj\Debug\tomogramm_Smolin.exe
+G:\dev\graphics\computer_graphics\second\tomogramm_Smolin\obj\Debug\tomogramm_Smolin.pdb
