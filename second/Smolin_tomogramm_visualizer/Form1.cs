@@ -63,7 +63,14 @@ namespace Smolin_tomogramm_visualizer
                     view_.draw_texture();
                 }
                 else
-                    view_.draw_quads(current_layer);
+                {
+                    if (checkBox1.Checked)
+                        view_.draw_quads(current_layer, true);
+                    else
+                        view_.draw_quads(current_layer, false);
+
+                }
+
                 glControl1.SwapBuffers();
             }
         }

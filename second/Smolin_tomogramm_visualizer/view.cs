@@ -101,7 +101,7 @@ namespace Smolin_tomogramm_visualizer
             return Color.FromArgb(255, new_val, new_val, new_val);
         }
 
-        public void draw_quads(int layer_num)
+        public void draw_quads(int layer_num, bool flag)
         {
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
             GL.Begin(BeginMode.Quads);
@@ -109,30 +109,59 @@ namespace Smolin_tomogramm_visualizer
                 for(int y_coord = 0; y_coord < bin_read.Y - 1; ++y_coord)
                 {
                     short value;
+                    if (flag == false)
+                    {
+                        // 1 вершина
+                        value = bin_read.array[x_coord + y_coord * bin_read.X
+                            + layer_num * bin_read.X * bin_read.Y];
+                        GL.Color3(transfer_function(value));
+                        GL.Vertex2(x_coord, y_coord);
 
-                    // 1 вершина
-                    value = bin_read.array[x_coord + y_coord * bin_read.X
-                        + layer_num * bin_read.X * bin_read.Y];
-                    GL.Color3(transfer_function(value));
-                    GL.Vertex2(x_coord, y_coord);
+                        // 2 вершина
+                        value = bin_read.array[x_coord + (y_coord + 1) * bin_read.X
+                            + layer_num * bin_read.X * bin_read.Y];
+                        GL.Color3(transfer_function(value));
+                        GL.Vertex2(x_coord, y_coord + 1);
 
-                    // 2 вершина
-                    value = bin_read.array[x_coord + (y_coord+1) * bin_read.X
-                        + layer_num * bin_read.X * bin_read.Y];
-                    GL.Color3(transfer_function(value));
-                    GL.Vertex2(x_coord, y_coord + 1);
+                        // 3 вершина
+                        value = bin_read.array[x_coord + 1 + (y_coord + 1) * bin_read.X
+                                                + layer_num * bin_read.X * bin_read.Y];
+                        GL.Color3(transfer_function(value));
+                        GL.Vertex2(x_coord + 1, y_coord + 1);
 
-                    // 3 вершина
-                    value = bin_read.array[x_coord + 1 + (y_coord + 1) * bin_read.X
-                                            + layer_num * bin_read.X * bin_read.Y];
-                    GL.Color3(transfer_function(value));
-                    GL.Vertex2(x_coord + 1, y_coord + 1);
-
-                    // 4 вершина
-                    value = bin_read.array[x_coord + 1 + y_coord * bin_read.X
-                                            + layer_num * bin_read.X * bin_read.Y];
-                    GL.Color3(transfer_function(value));
-                    GL.Vertex2(x_coord + 1, y_coord);
+                        // 4 вершина
+                        value = bin_read.array[x_coord + 1 + y_coord * bin_read.X
+                                                + layer_num * bin_read.X * bin_read.Y];
+                        GL.Color3(transfer_function(value));
+                        GL.Vertex2(x_coord + 1, y_coord);
+                    }
+                    else
+                    {
+                        //1 вершина 
+                        value = bin_read.array[x_coord + y_coord * bin_read.X
+                            + layer_num * bin_read.X * bin_read.Y];
+                        GL.Color3(transfer_function(value));//установка текущего цвета
+                                                           //GL.Vertex2(x_coord, y_coord);//указать вершину
+                        GL.Vertex2(x_coord, bin_read.Y - y_coord - 1);
+                        //2 вершина
+                        value = bin_read.array[x_coord + (y_coord + 1) * bin_read.X
+                            + layer_num * bin_read.X * bin_read.Y];
+                        GL.Color3(transfer_function(value));
+                        //GL.Vertex2(x_coord, y_coord + 1);
+                        GL.Vertex2(x_coord, bin_read.Y - y_coord);
+                        //3 вершина
+                        value = bin_read.array[x_coord + 1 + (y_coord + 1) * bin_read.X
+                            + layer_num * bin_read.X * bin_read.Y];
+                        GL.Color3(transfer_function(value));
+                        //GL.Vertex2(x_coord + 1, y_coord + 1);
+                        GL.Vertex2(x_coord + 1, bin_read.Y - y_coord);
+                        //4 вершина 
+                        value = bin_read.array[x_coord + 1 + y_coord * bin_read.X
+                            + layer_num * bin_read.X * bin_read.Y];
+                        GL.Color3(transfer_function(value));
+                        //GL.Vertex2(x_coord + 1, y_coord);
+                        GL.Vertex2(x_coord + 1, bin_read.Y - y_coord - 1);
+                    }
 
                 }
             GL.End();
